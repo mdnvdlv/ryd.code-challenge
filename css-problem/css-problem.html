@@ -1,19 +1,111 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <!-- I apologize but I had to add meta viewport for maintain my mental health -->
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <!-- Unless I had to code a email template, I'd like to keep css in a separate file -->
-    <link href="style.css" rel="stylesheet">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <!-- Make the green color background take the whole browser page -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      html {
+        /* Make the green color background take the whole browser page */
+        background-color: #5ba68a;
+        height: 100%;
+        width: 100%;
+      }
+      body {
+        font-family: sans-serif;
+      }
+      .container {
+        color: lemonchiffon;
+        height: 100%;
+        padding: 20px;
+        /* Center the text and the button in the page */
+        width: 90%;
+        text-align: center;
+        margin: auto;
+      }
+
+      .button {
+        background: #d9c45b;
+        border: none;
+        border-radius: 50%;
+        color: inherit;
+      }
+
+      .texts p {
+        text-wrap: balance;
+      }
+      .btn {
+        /* The button has to stay always at the bottom of the page */
+        position: fixed;
+        bottom: 20px;
+        width: 100%;
+      }
+
+      /*Media queries for responsive layout
+        - Button and font sizes should dynamically adjust according to the browser window size.
+        - It's up to you to decide whether to adopt responsive or adaptive layout
+      */
+
+      /*Mobile*/
+      @media only screen and (max-width: 767px) {
+        .texts p {
+          font-size: 1rem;
+        }
+        button {
+          font-size: 1.2rem;
+          height: 100px;
+          width: 100px;
+        }
+      }
+      /*Tablets*/
+      @media only screen and (min-width: 768px) {
+        .texts p {
+          font-size: 1.2rem;
+        }
+        .button {
+          font-size: 1.7rem;
+          height: 130px;
+          width: 130px;
+        }
+      }
+      /*Desktop*/
+      @media only screen and (min-width: 1200px) {
+        .texts p {
+          font-size: 1.5rem;
+        }
+        .button {
+          font-size: 1.875rem;
+          height: 150px;
+          width: 150px;
+        }
+      }
+      /* Extra large devices */
+      @media only screen and (min-width: 1400px) {
+        .texts p {
+          font-size: 2rem;
+        }
+        .button {
+          font-size: 3rem;
+          height: 300px;
+          width: 300px;
+        }
+      }
+    </style>
   </head>
-  <body onclick="">
-    <div class="textbox" id="introduction">
-      <p class="text">Please center the text in the button. As reference see the png image in this repo. Please do not use calc.
-                                        The size of the button and the font should to be dynamically adjusted based on the browser window size</p>
-      <form method="POST">
-        <input class="button" type="submit" value="Continue">
-      </form>
+  <body>
+    <div class="container">
+      <div class="texts">
+        <p>Welcome to RYD Lime Chiffon</p>
+        <p>
+          Some long text: Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <div class="btn">
+        <button type="submit" class="button">Continue</button>
+      </div>
     </div>
   </body>
 </html>
